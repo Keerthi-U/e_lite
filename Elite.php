@@ -723,7 +723,7 @@ input.file-up:after {
                         </div>
                         </div>
                         <div class="submit">
-                           <button type="submit" name="submit"  class="btn btn-primary" id="form_sub">Submit</button>
+                           <button type="submit" name="submit"  class="btn btn-primary" id="form_sub">Submited</button>
                         </div>
                     </div>
                 </div>
