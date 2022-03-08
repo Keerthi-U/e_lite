@@ -1,87 +1,63 @@
 <?php
+// session_start();
+include('db.php');
+// $upload_dir = 'testimonial_upload/';
+   
+  //  $selected=$_POST['select']; 
+  //     var_dump($selected);
+// $id=$_POST['id'];
+ $fullname = $_POST['fullname'];
+ echo"$fullname";
+$dob = $_POST['dob'];
+// echo $dob;
+$gender = $_POST['gender'];
+$fathername = $_POST['fathername'];
+$mothername= $_POST['mothername'];
+ $contactnumber= $_POST['contactnumber'];
+ $address= $_POST['address'];
+ $email= $_POST['email'];
+ $city= $_POST['city'];
+ $district= $_POST['district'];
+ $state=$_POST['state'];
+$image=$_FILES['user_imag']['tmp_name'];
+$school_name=$_POST['school_name'];
+$reg_no=$_POST['reg_no'];
+$department=$_POST['department'];
+$school_address=$_POST['school_address'];
+$mark_percentage=$_POST['mark_percentage'];
+$previous_marksheet=$_FILES['previous_marksheet']['tmp_name'];
+$previous_marksheet=$_POST['previous_marksheet'];
+$term_semester=$_POST['term_semester'];
+$academic_year=$_POST['academic_year'];
+$scholarship_select=$_POST['scholarship_select'];
+$phone_no=$_POST['phone_no'];
+$student_email=$_POST['student_email'];
+$account_no=$_POST['account_no'];
+$bank_name=$_POST['bank_name'];
+$ifsc_code=$_POST['ifsc_code'];
+$aadhar_number=$_POST['aadhar_number'];
+$bank_attachment=$_POST['bank_attachment'];
+$hospital_name=$_POST['hospital_name'];
+$disease_select=$_POST['disease_select'];
+$disease_name=$_POST['disease_name'];
+$severity_disease=$_POST['severity_disease'];
+$admission_date=$_POST['admission_date'];
+$approximate_expense=$_POST['approximate_expense'];
+$request_amount=$_POST['request_amount'];
+$hospital_report=$_FILES['hospital_report']['tmp_name'];
+$hospital_report=$_POST['hospital_report'];
+$previous_medical_report=$_FILES['previous_medical_report']['tmp_name'];
 
-      $selected = $_POST['select'];
-      var_dump($selected);
-    
-    //   $fullname = $_POST['fullname'];
-    //   $dob = $_POST['dob'];
-    //   $gender = $_POST['gender'];
-    //   $fathername = $_POST['fathername'];
-    //   $mothername = $_POST['mothername'];
-    //   $contactnumber = $_POST['contactnumber'];
-    //   $address = $_POST['address'];
-    //   $email = $_POST['email'];
-    //   $city = $_POST['city'];
-    //   $district = $_POST['district'];
-    //   $state = $_POST['state'];
-  
-     
-    // //  student details
+$previous_medical_report=$_POST['previous_medical_report'];
+$insurance_scheme=$_POST['insurance_scheme'];
+$government=$_POST['government'];
+$private=$_POST['private'];
+$guardian_name=$_POST['guardian_name'];
+$created_at   = date('Y-m-d H:i:s');
+$updated_at=  $created_on   = date('Y-m-d H:i:s');
+$created_by = $_SESSION["logged_user"];
+echo $query = "INSERT into `scholarship_table`(`fullname`,`dob`,`gender`,`fathername`,`mothername`,`contactnumber`,`address`,`email`,`city`,`district`,`state`,`school_name`,`reg_no`,`department`,`school_address`,`mark_percentage`,`previous_marksheet`,`term_semester`,`academic_year`,`scholarship_select`,`phone_no`,`student_email`,`account_no`,`bank_name`,`ifsc_code`,`aadhar_number`,`bank_attachment`,`hospital_name`,`disease_select`,`severity_disease`,`admission_date`,`approximate_expense`,`request_amount`,`hospital_report`,`previous_medical_report,`guardian_name`,`created_at,updated_at`,`created_by`,`updated_by`,`approved_status`,`ratings`) VALUES ('$fullname','$dob','$gender','$fathername','$mothername','$contactnumber','$address','$email','$city','$district','$state','$school_name','$reg_no','$department','$school_address','$mark_percentage','$previous_marksheet','$term_semester','$academic_year','$scholarship_select','$phone_no','$student_email','$account_no','$bank_name','$ifsc_code','$aadhar_number','$bank_attachment','$hospital_name','$disease_select','$severity_disease','$admission_date','$approximate_expense','$request_amount','$hospital_report','$previous_medical_report','$government','$private','$guardian_name','$created_at','$updated_at','$created_by','$updated_by','$approved_status','$ratings')";
+    $result = mysqli_query($conn,$query);
+var_dump($result);
 
-    // $n_school_college = $_POST['n_school_college'];
-    // $reg_no = $_POST['reg_no'];
-    // $class_dept = $_POST['class_dept'];
-    // $s_c_address = $_POST['s_c_address'];
-    // $mark_percent = $_POST['mark_percent'];
-    // $previous_marksheet = $_FILES['previous_marksheet']['name'];
-    // $term_semester = $_POST['term_semester'];
-    // $acadmic_year = $_POST['acadmic_year'];
-    // $sholarship_select = $_POST['sholarship_select'];
-    // $s_phone_no = $_POST['s_phone_no'];
-    // $s_email = $_POST['s_email'];
-    // $acc_no = $_POST['acc_no'];
-    // $bank_name = $_POST['bank_name'];
-    // $ifsc_code = $_POST['ifsc_code'];
-    // $aadhar_number = $_POST['aadhar_number'];
-    // $attachment = $_POST['attachment'];
-
-    //   //  medical details
-    //   $hospital_name = $_POST['hospital_name'];
-    //   $disease_select = $_POST['disease_select'];
-    //   $disease_name = $_POST['disease_name'];
-      $insurance = $_POST['insurance'];
-      $goverment = $_POST['goverment'];
-      $private = $_POST['private'];
-  
-
-
-
-
-      echo 'insurance:'  . $insurance; 
-      echo 'goverment:'  . $goverment; 
-      echo 'private:'  . $private; 
-        // echo 'First Name: ' . $fullname; 
-        // echo '<br>';
-     
-        // echo 'last Name: ' . $dob; 
-        // echo '<br>';
-        // echo 'Gender: ' . $gender; 
-        // echo '<br>';
-      
-        // echo '<br>';
-        // echo 'Father Name: ' . $fathername; 
-        // echo '<br>';
-        // echo 'mother Name: ' . $mothername; 
-        // echo '<br>';
-        // echo 'phone Name: ' . $contactnumber; 
-        // echo '<br>';
-        // echo 'address: ' . $address; 
-        // echo 'address: ' .$previous_marksheet; 
-        // echo '<br>';
-        // echo 'city: ' . $city; 
-        // echo '<br>';
-        // echo 'state: ' . $state; 
-        // echo '<br>';
-        // echo 'country: ' . $district; 
-        // echo '<br>';
-        // echo 'First Name: ' . $n_school_college; 
-        // echo '<br>';
-     
-        // echo 'last Name: ' . $reg_no; 
-        // echo '<br>';
-        // echo 'Gender: ' .$class_dept. '<br>'   .$s_c_address.  '<br>'  .$mark_percent.  '<br>'  .$previous_marksheet.  '<br>'   .$term_semester.  '<br>' . $acadmic_year. '<br>'   .$sholarship_select.  '<br>'  . $s_phone_no.  '<br>'  .  $s_email.  '<br>'   . $acc_no.  '<br>'  ; 
-       
-      
-       
-        
-?>
+  ?>

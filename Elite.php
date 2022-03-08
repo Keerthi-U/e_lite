@@ -268,10 +268,13 @@ input.file-up:after {
 </style>
 </head>
 <body>
+    <?php
+    include("db.php");
+    ?>
   <div class="container">
 <div class="main">
     <h1 class="text-center sc-heading">Scholarship Form</h1>
-<form class="form" name="myform" method="post" id="subform" onsubmit="return medical()" enctype="multipart/form-data">
+<form class="form" name="myform" method="post" id="myform" onsubmit="return medical()" enctype="multipart/form-data">
 <div class="form-group row choose-frm">
                         <label for="inputEmail3" class=" choose_form  col-sm-4 col-form-label">Choose form Type</label>
                         <div class="col-sm-8">
@@ -297,13 +300,15 @@ input.file-up:after {
                     </div>
                     <div id="toggle1">
                         <div class="row">
+                            
                             <div class="fullname col-lg-4">
+                            <input id="id" type="hidden" class="form-control" name="">
                                 <label for="fullname" class="text-dark">Full Name</label>
                                 <input id="fullname" type="text" class="form-control" name="fullname">
                             </div>  
                             <div class="dob col-md-12 col-lg-4 col-xl-4">
                                 <label for="d_o_admission">Date Of Birth</label>
-                                <input id="d_o_admission" class="form-control date" name="dob" placeholder="Select date...">
+                                <input id="d_o_admission" type="date" class="form-control date" name="dob" placeholder="Select date...">
                                  
                              </div>
                             <div class="gender col-lg-4">
@@ -386,7 +391,7 @@ input.file-up:after {
                           
                                     <div class="h_admitted col-lg-4">
                                         <label for="h_admitted">Name of School/ College</label>
-                                        <input id="h_admitted" type="text" class="form-control input-sm" name="n_school_college">
+                                        <input id="h_admitted" type="text" class="form-control input-sm" name="school_name">
                                     </div> 
                                     <div class="h_admitted col-lg-4">
                                         <label for="h_admitted">Enrollment/Register Number</label>
@@ -395,18 +400,18 @@ input.file-up:after {
                              
                                     <div class="h_admitted col-lg-4">
                                         <label for="h_admitted">Class/Department</label>
-                                        <input id="h_admitted" type="text" class="form-control input-sm" name="class_dept">
+                                        <input id="h_admitted" type="text" class="form-control input-sm" name="department">
                                     </div>  
                                     <div class="h_admitted col-lg-4">
                                         <label for="h_admitted">School/College Address</label>
-                                        <textarea class="form-control input-sm" id="s_c_address" rows="5"></textarea>
+                                        <textarea class="form-control input-sm" id="s_c_address" name="school_address"rows="5"></textarea>
                                     </div> 
                                   
                              <div class="col-lg-8">
                                  <div class="row">
                                     <div class="h_admitted col-lg-6">
                                         <label for="h_admitted">Marks/Percentage</label>
-                                        <input id="h_admitted" type="text" class="form-control input-sm" name="mark_percent">
+                                        <input id="h_admitted" type="text" class="form-control input-sm" name="mark_percentage">
                                     </div> 
                                     <div class="form-group col-lg-6">
                                         <label for="exampleFormControlFile1">Pervious Marksheet</label>
@@ -418,8 +423,8 @@ input.file-up:after {
  
                                        
                                     
-                                        <input type="text" name="file-name" id="file-name" class="choose-txt form-control" >
-                                        <input id="file-upload" class="file-up" name='upload_cont_img' type="file"  >
+                                        <input type="text" id="file-name" class="choose-txt form-control" >
+                                        <input id="file-upload" class="file-up"  name="previous_marksheet"  type="file"  >
                                       
 
                                     </div>
@@ -430,7 +435,7 @@ input.file-up:after {
                                     </div> 
                                     <div class="h_admitted col-lg-6">
                                         <label for="h_admitted"  class="lab">Acadamic Year</label>
-                                        <input id="h_admitted" type="text" class="form-control input-sm" name="acadamic_year">
+                                        <input id="h_admitted" type="text" class="form-control input-sm" name="academic_year">
                                     </div> 
                                   
                                 
@@ -449,13 +454,13 @@ input.file-up:after {
                             </div> 
                              <div class="h_admitted col-lg-4">
                                 <label for="h_admitted"> Phone Number</label>
-                                <input id="h_admitted" type="text" class="form-control input-sm" name="s_phone_no">
+                                <input id="h_admitted" type="text" class="form-control input-sm" name="phone_no">
                             </div>
                         
                          
                             <div class="h_admitted col-lg-4">
                                 <label for="h_admitted"> Email</label>
-                                <input id="h_admitted" type="text" class="form-control input-sm" name="s_email">
+                                <input id="h_admitted" type="text" class="form-control input-sm" name="student_email">
                              </div>
                         </div>
 
@@ -468,7 +473,7 @@ input.file-up:after {
                              
                                 <div class="a_number col-lg-4">
                                     <label for="a_number">Account Number</label>
-                                    <input id="a_number" type="number" class="form-control" name="acc_no">
+                                    <input id="a_number" type="number" class="form-control" name="account_no">
                                 </div>
                                 <div class="n_o_bank col-lg-4">
                                     <label for="n_o_bank">Name Of Bank</label>
@@ -492,13 +497,11 @@ input.file-up:after {
                                     <input type="text" name="file-name" id="file-name" class="file-name form-control" >
                                     <input type="button" class="f_btn" value="choose"> -->
 
-                                    <input type="text" name="file-name1" id="file-name1" class=" choose-txt form-control" >
-                                    <input id="file-upload1" class="file-up" name='upload_cont_img' type="file">
+                                    <input type="text" name="bank_attachment" id="file-name1" class=" choose-txt form-control" >
+                                    <input id="file-upload1" class="file-up" name="bank_attachment" type="file">
                                     
                                   
-                                  
-                                
-                                    </div>
+                                   </div>
 
                                 </div>
                             
@@ -519,7 +522,7 @@ input.file-up:after {
                         <div class="row">
                             <div class="h_admitted col-lg-4">
                                 <label for="h_admitted">Name Of Hospital Admitted</label>
-                                <input id="h_admitted" type="text" class="form-control input-sm" name="hosiptal_name">
+                                <input id="h_admitted" type="text" class="form-control input-sm" name="hospital_name">
                             </div>  
                             <div class="t_o_disease col-lg-4">
                                 <label for="t_o_disease">Type Of Disease</label>
@@ -551,11 +554,11 @@ input.file-up:after {
                             </div>  
                             <div class="a_expense col-lg-4">
                                 <label for="a_expense">Approximate Expenses</label>
-                                <input id="a_expense" type="text" class="form-control" name="approx_expense">
+                                <input id="a_expense" type="text" class="form-control" name="approximate_expense">
                             </div>  
                             <div class="r_amount col-lg-4">
                                 <label for="r_amount">Requested Amount</label>
-                                <input id="r_amount" type="text" class="form-control" name="req_amount">
+                                <input id="r_amount" type="text" class="form-control" name="request_amount">
                             </div> 
                             <div class="form-group col-lg-4">
                                 <label for="exampleFormControlFile1"> Hospital Report/LOR </label>
@@ -568,7 +571,7 @@ input.file-up:after {
                             <div class="form-group col-lg-4">
                                 <label for="exampleFormControlFile1">Pervious Medical Report</label>
                                 <div class="d-flex">
-                                <input type="file" class="form-control-file" name="prev_medical_report" id="exampleFormControlFile1">
+                                <input type="file" class="form-control-file" name="previous_medical_report" id="exampleFormControlFile1">
                                 <input type="text" name="file-name" id="file-name" class="file-name form-control" >
                                 <input type="button" class="f_btn" value="choose">
                                 </div>
@@ -579,12 +582,12 @@ input.file-up:after {
                             <div class="row orphan_1">
                                 <label for="orphan" class="orphan1">Do you have Insurance scheme?</label>
                             <div class="custom-control custom-radio" id="in_orphan">
-                                <input type="radio" class="custom-control-input" id="customRadio5" name="insurance" value="yees">
+                                <input type="radio" class="custom-control-input" id="customRadio5" name="insurance_scheme" value="">
                                 <label class="custom-control-label" for="customRadio5">Yes</label>
                             </div>
                 
                             <div class="custom-control custom-radio" id="in_orphan">
-                                <input type="radio" class="custom-control-input" id="customRadio6" name="insurance" value="noo">
+                                <input type="radio" class="custom-control-input" id="customRadio6" name="insurance_scheme" value="">
                                 <label class="custom-control-label" for="customRadio6">No</label>
                             </div> 
                             </div>
@@ -592,7 +595,7 @@ input.file-up:after {
                                 <div class="row orphan_1">
                                     <div class="a_expense col-lg-4">
                                         <label for="a_expense">Goverment</label>
-                                        <input id="a_expense" type="text" class="form-control" name="goverment" placeholder=" Enter Insurance Id">
+                                        <input id="a_expense" type="text" class="form-control" name="government" placeholder=" Enter Insurance Id">
                                     </div> 
                     
                                     <div class="a_expense col-lg-4">
@@ -614,12 +617,12 @@ input.file-up:after {
                             <div class="row">
                                 <div class="a_number col-lg-4">
                                     <label for="a_number">Account Number</label>
-                                    <input id="a_number" type="text" class="form-control" name="a_number">
+                                    <input id="a_number" type="text" class="form-control" name="account_no">
                                 </div> 
                            
                                 <div class="n_o_bank col-lg-4">
                                     <label for="n_o_bank">Name Of Bank</label>
-                                    <input id="n_o_bank" type="text" class="form-control" name="n_o_bank">
+                                    <input id="n_o_bank" type="text" class="form-control" name="bank_name">
                                 </div>  
                                 <div class="ifsc_code col-lg-4">
                                     <label for="ifsc_code">IFSC Code</label>
@@ -630,7 +633,7 @@ input.file-up:after {
                             <div class="row">
                                 <div class="aa_number col-lg-4">
                                     <label for="aa_number">Aadhar Number</label>
-                                    <input id="aa_number" type="text" class="form-control" name="aa_number">
+                                    <input id="aa_number" type="text" class="form-control" name="aadhar_number">
                                 </div>  
                                 <div class="form-group col-lg-4">
                                     <label for="exampleFormControlFile1">Attachement</label>
@@ -638,8 +641,8 @@ input.file-up:after {
                                         <!-- <input type="file" class="form-control-file" id="exampleFormControlFile1">
                                         <input type="text" name="file-name" id="file-name" class="file-name form-control" >
                                         <input type="button" class="f_btn" value="choose"> -->
-                                        <input type="text" name="file-name" id="file-name2" class="choose-txt form-control" >
-                                        <input id="file-upload2" class="file-up" name='upload_cont_img' type="file"  >
+                                        <input type="text" name="bank_attachment" id="file-name2" class="choose-txt form-control" >
+                                        <input id="file-upload2" class="file-up" name='bank_attachment' type="file"  >
                                     </div>
                                    </div>
                             
@@ -723,7 +726,7 @@ input.file-up:after {
                         </div>
                         </div>
                         <div class="submit">
-                           <button type="submit" name="submit"  class="btn btn-primary" id="form_sub">Submited</button>
+                           <button type="submit" name="submit"  class="btn btn-primary" id="submit">Submited</button>
                         </div>
                     </div>
                 </div>
@@ -731,10 +734,10 @@ input.file-up:after {
       </div>
   </div>
 
-          
+<!--           
 <div class="formdata" id="formdata">
 
-</div>
+</div> -->
 
 
 
@@ -754,20 +757,17 @@ input.file-up:after {
         <script src="student application.js"></script>
         <script>
 
-      $(document).ready(function (){
+    //   $(document).ready(function (){
   
-      $('#form_sub').click(function(event){
-      event.preventDefault();
+      $('#submit').click(function(e){
+   e.preventDefault();
       alert('ok');
-      var file_image = $('#previous_marksheet').prop('files')[0];
-      alert(file_image);
-      var formdata =new FormData(document.getElementById('subform'));
-      formdata.append('file',file_image);
+    //   var file_image = $('#previous_marksheet').prop('files')[0];
+    //   alert(file_image);
+      var formdata =new FormData(document.getElementById('myform'));
+    //   formdata.append('file',file_image);
       alert(formdata);
-      
-  
-   
-          $.ajax({
+     $.ajax({
           url: 'insert.php',
           data: formdata,
           processData: false,
@@ -775,15 +775,15 @@ input.file-up:after {
           type: 'POST',
           success: function(data){
               alert(data);
-
-              $('#formdata').html(data);
+        
+            //   $('#formdata').html(data);
           }
           });
    
   
     
   });
-  });
+//   });
 
 // script for choose file
 // $(document).ready(function() {
