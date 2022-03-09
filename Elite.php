@@ -563,17 +563,21 @@ input.file-up:after {
                             <div class="form-group col-lg-4">
                                 <label for="exampleFormControlFile1"> Hospital Report/LOR </label>
                                 <div class="d-flex">
-                                <input type="file" class="form-control-file" name="hospital_report" id="exampleFormControlFile1">
+                                <!-- <input type="file" class="form-control-file" name="hospital_report" id="exampleFormControlFile1">
                                 <input type="text" name="file-name" id="file-name" class="file-name form-control" >
-                                <input type="button" class="f_btn" value="choose">
+                                <input type="button" class="f_btn" value="choose"> -->
+                                <input type="text" name="bank_attachment" id="file-name3" class=" choose-txt form-control" >
+                                <input id="file-upload3" class="file-up" name="bank_attachment" type="file">
                                 </div>
                                </div> 
                             <div class="form-group col-lg-4">
                                 <label for="exampleFormControlFile1">Pervious Medical Report</label>
                                 <div class="d-flex">
-                                <input type="file" class="form-control-file" name="previous_medical_report" id="exampleFormControlFile1">
+                                <!-- <input type="file" class="form-control-file" name="previous_medical_report" id="exampleFormControlFile1">
                                 <input type="text" name="file-name" id="file-name" class="file-name form-control" >
-                                <input type="button" class="f_btn" value="choose">
+                                <input type="button" class="f_btn" value="choose"> -->
+                                <input type="text" name="bank_attachment" id="file-name4" class=" choose-txt form-control" >
+                                <input id="file-upload4" class="file-up" name="bank_attachment" type="file">
                                 </div>
                              </div> 
                         </div>

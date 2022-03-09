@@ -285,4 +285,16 @@ var index = 0;
       alert(fname2);
       $('#file-name2').val(fname2);
     });
+
+    $("#file-upload3").change(function(){
+      var fname3=$("#file-upload3").val().split('\\').pop().split('/').pop();
+        alert(fname3);
+        $('#file-name3').val(fname3);
+    });
+
+    $("#file-upload4").change(function(){
+        var fname4=$("#file-upload4").val().split('\\').pop().split('/').pop();
+          alert(fname4);
+          $('#file-name4').val(fname4);
+    });
  
