@@ -278,7 +278,7 @@ input.file-up:after {
 <div class="form-group row choose-frm">
                         <label for="inputEmail3" class=" choose_form  col-sm-4 col-form-label">Choose form Type</label>
                         <div class="col-sm-8">
-                        <select id="flip" name="select" class="form-control">
+                        <select id="flip" name="form_type" class="form-control">
                              <option value="">Select</option>  
                             <option value="1">Student Form</option>
                             <option value="2">Medical Form</option>
@@ -302,7 +302,7 @@ input.file-up:after {
                         <div class="row">
                             
                             <div class="fullname col-lg-4">
-                            <!-- <input id="id" type="hidden" class="form-control" name=""> -->
+                            <input id="id" type="hidden" class="form-control" name="">
                                 <label for="fullname" class="text-dark">Full Name</label>
                                 <input id="fullname" type="text" class="form-control" name="fullname">
                             </div>  
@@ -473,22 +473,22 @@ input.file-up:after {
                              
                                 <div class="a_number col-lg-4">
                                     <label for="a_number">Account Number</label>
-                                    <input id="a_number" type="number" class="form-control" name="account_no">
+                                    <input id="a_number" type="number" class="form-control" name="account_no1">
                                 </div>
                                 <div class="n_o_bank col-lg-4">
                                     <label for="n_o_bank">Name Of Bank</label>
-                                    <input id="n_o_bank" type="text" class="form-control" name="bank_name">
+                                    <input id="n_o_bank" type="text" class="form-control" name="bank_name1">
                                 </div>   
                                 <div class="ifsc_code col-lg-4">
                                     <label for="ifsc_code">IFSC Code</label>
-                                    <input id="ifsc_code" type="text" class="form-control" name="ifsc_code">
+                                    <input id="ifsc_code" type="text" class="form-control" name="ifsc_code1">
                                 </div>  
                             </div>
 
                             <div class="row">
                                 <div class="aa_number col-lg-4">
                                     <label for="aa_number">Aadhar Number</label>
-                                    <input id="aa_number" type="number" class="form-control" name="aadhar_number">
+                                    <input id="aa_number" type="number" class="form-control" name="aadhar_number1">
                                 </div>  
                                  <div class="form-group col-lg-4">
                                     <label for="exampleFormControlFile1">Attachement</label>
@@ -498,7 +498,7 @@ input.file-up:after {
                                     <input type="button" class="f_btn" value="choose"> -->
 
                                     <input type="text" name="bank_attachment" id="file-name1" class=" choose-txt form-control" >
-                                    <input id="file-upload1" class="file-up" name="bank_attachment" type="file">
+                                    <input id="file-upload1" class="file-up" name="bank_attachment1" type="file">
                                     
                                   
                                    </div>
@@ -566,8 +566,8 @@ input.file-up:after {
                                 <!-- <input type="file" class="form-control-file" name="hospital_report" id="exampleFormControlFile1">
                                 <input type="text" name="file-name" id="file-name" class="file-name form-control" >
                                 <input type="button" class="f_btn" value="choose"> -->
-                                <input type="text" name="bank_attachment" id="file-name3" class=" choose-txt form-control" >
-                                <input id="file-upload3" class="file-up" name="bank_attachment" type="file">
+                                <input type="text" name="hospital_report" id="file-name3" class=" choose-txt form-control" >
+                                <input id="file-upload3" class="file-up" name="hospital_report" type="file">
                                 </div>
                                </div> 
                             <div class="form-group col-lg-4">
@@ -576,8 +576,8 @@ input.file-up:after {
                                 <!-- <input type="file" class="form-control-file" name="previous_medical_report" id="exampleFormControlFile1">
                                 <input type="text" name="file-name" id="file-name" class="file-name form-control" >
                                 <input type="button" class="f_btn" value="choose"> -->
-                                <input type="text" name="bank_attachment" id="file-name4" class=" choose-txt form-control" >
-                                <input id="file-upload4" class="file-up" name="bank_attachment" type="file">
+                                <input type="text" name="previous_medical_report" id="file-name4" class=" choose-txt form-control" >
+                                <input id="file-upload4" class="file-up" name="previous_medical_report" type="file">
                                 </div>
                              </div> 
                         </div>
