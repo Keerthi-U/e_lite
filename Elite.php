@@ -274,7 +274,7 @@ input.file-up:after {
   <div class="container">
 <div class="main">
     <h1 class="text-center sc-heading">Scholarship Form</h1>
-<form class="form" name="myform" method="post" id="myform" onsubmit="return medical()" enctype="multipart/form-data">
+<form class="form" action="" name="myform" method="post" id="myform" onsubmit="return medical()" enctype="multipart/form-data">
 <div class="form-group row choose-frm">
                         <label for="inputEmail3" class=" choose_form  col-sm-4 col-form-label">Choose form Type</label>
                         <div class="col-sm-8">
@@ -302,7 +302,7 @@ input.file-up:after {
                         <div class="row">
                             
                             <div class="fullname col-lg-4">
-                            <input id="id" type="hidden" class="form-control" name="">
+                            <!-- <input id="id" type="hidden" class="form-control" name=""> -->
                                 <label for="fullname" class="text-dark">Full Name</label>
                                 <input id="fullname" type="text" class="form-control" name="fullname">
                             </div>  
@@ -423,7 +423,7 @@ input.file-up:after {
  
                                        
                                     
-                                        <input type="text" id="file-name" class="choose-txt form-control" >
+                                        <input type="text" id="file-name" name="previous_marksheet" class="choose-txt form-control" >
                                         <input id="file-upload" class="file-up"  name="previous_marksheet"  type="file"  >
                                       
 
@@ -582,12 +582,12 @@ input.file-up:after {
                             <div class="row orphan_1">
                                 <label for="orphan" class="orphan1">Do you have Insurance scheme?</label>
                             <div class="custom-control custom-radio" id="in_orphan">
-                                <input type="radio" class="custom-control-input" id="customRadio5" name="insurance_scheme" value="">
+                                <input type="radio" class="custom-control-input" id="customRadio5" name="insurance_scheme" value="yes">
                                 <label class="custom-control-label" for="customRadio5">Yes</label>
                             </div>
                 
                             <div class="custom-control custom-radio" id="in_orphan">
-                                <input type="radio" class="custom-control-input" id="customRadio6" name="insurance_scheme" value="">
+                                <input type="radio" class="custom-control-input" id="customRadio6" name="insurance_scheme" value="no">
                                 <label class="custom-control-label" for="customRadio6">No</label>
                             </div> 
                             </div>
