@@ -245,6 +245,8 @@ var index = 0;
         $("#toggle1").slideDown(1000);
         $("#stu_toggle2").show();
         $("#md_toggle5").hide();
+     
+
        
       }
       else if ($select == '2') {

@@ -290,7 +290,7 @@ input.file-up:after {
                     <div class="wrapper wrapperhide " id="wrapper" >
                   
                   
-           
+            
     
       
   
@@ -379,6 +379,9 @@ input.file-up:after {
                         </div>
                     </div>
 
+            
+        
+            
                 <div class="stu_toggle2" id="stu_toggle2">
                     <div class="heading2" id="t2">
                         <div class="heading2_2 text-light">B.Student Details</div>
@@ -464,11 +467,11 @@ input.file-up:after {
                              </div>
                         </div>
 
-                     
-
+                      
+                       
                         <div class="heading2_1 mt-5">Bank AccountDetails:-</div>
 
-                        <div class="account_details">
+                        <div class="account_details"  id="student_bank">
                             <div class="row">
                              
                                 <div class="a_number col-lg-4">
@@ -499,15 +502,14 @@ input.file-up:after {
 
                                     <input type="text" name="bank_attachment" id="file-name1" class=" choose-txt form-control" >
                                     <input id="file-upload1" class="file-up" name="bank_attachment1" type="file">
-                                    
-                                  
-                                   </div>
-
-                                </div>
+                                    </div>
+                                  </div>
                             
                             </div>
 
                         </div>
+
+                       
                     </div>
                 </div>
              
@@ -617,7 +619,7 @@ input.file-up:after {
 
                         <div class="heading2_1">Bank AccountDetails:-</div>
 
-                        <div class="account_details">
+                        <div class="account_details" id="medical_bank">
                             <div class="row">
                                 <div class="a_number col-lg-4">
                                     <label for="a_number">Account Number</label>
@@ -636,9 +638,7 @@ input.file-up:after {
 
                             <div class="row">
                                 <div class="aa_number col-lg-4">
-                                    <label for="aa_number">Aadhar Number</label>
-                                    <input id="aa_number" type="text" class="form-control" name="aadhar_number">
-                                </div>  
+                                    <@               </div>  
                                 <div class="form-group col-lg-4">
                                     <label for="exampleFormControlFile1">Attachement</label>
                                     <div class="d-flex">
@@ -653,6 +653,8 @@ input.file-up:after {
                             </div>
 
                         </div>
+
+                      
                     </div>
                </div>
               
