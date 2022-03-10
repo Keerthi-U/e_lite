@@ -638,7 +638,9 @@ input.file-up:after {
 
                             <div class="row">
                                 <div class="aa_number col-lg-4">
-                                    <@               </div>  
+                                    <label for="aa_number">Aadhar Number</label>
+                                    <input id="aa_number" type="text" class="form-control" name="aadhar_number">
+                                </div>  
                                 <div class="form-group col-lg-4">
                                     <label for="exampleFormControlFile1">Attachement</label>
                                     <div class="d-flex">
@@ -654,7 +656,7 @@ input.file-up:after {
 
                         </div>
 
-                      
+                    
                     </div>
                </div>
               
@@ -670,19 +672,19 @@ input.file-up:after {
                             <div class="row orphan_1">
                                 <label for="orphan" class="orphan">Orphan</label>
                             <div class="custom-control custom-radio" id="orphan">
-                                <input type="radio" class="custom-control-input" id="stu_customRadio3" name="radio2" value="yes">
+                                <input type="radio" class="custom-control-input" id="stu_customRadio3" name="orphan" value="yes">
                                 <label class="custom-control-label" for="stu_customRadio3">Yes</label>
                             </div>
                 
                             <div class="custom-control custom-radio" id="orphan">
-                                <input type="radio" class="custom-control-input" id="stu_customRadio4" name="radio2" value="no">
+                                <input type="radio" class="custom-control-input" id="stu_customRadio4" name="orphan" value="no">
                                 <label class="custom-control-label" for="stu_customRadio4">No</label>
                             </div>
                             </div>
                         </div> 
                         <div class="orpahan_yes col-lg-4" id="o_yes">
                             <label for="aa_number">Guardian Name</label>
-                            <input id="" type="text" class="form-control input-sm" name="guardian_name">
+                            <input id="" type="text" class="form-control input-sm" name="guardian_nae">
                         </div>
                         <div class="row10">
                             <div class="f_members" id="o_no">
@@ -696,11 +698,11 @@ input.file-up:after {
                                         <th>Marital Status</th>
                                         <th>Occupation</th>
                                         <th>Annual Income</th>
-                                        <th>Add</th>
+                                        <th>Add</th> 
                                         <tr id='row_0'>
-                                            <td><input type="text" id="txtfirst" class="form-control input-sm " /></td>
-                                            <td><input type="text" id="txtsecond" class="form-control input-sm " /></td>
-                                            <td><input type="text" id="txtthird"  class="form-control input-sm " /></td>
+                                            <td><input type="text" id="txtfirst" name="name" class="form-control input-sm " /></td>
+                                            <td><input type="text" id="txtsecond" name="age" class="form-control input-sm " /></td>
+                                            <td><input type="text" id="txtthird" name="gender"  class="form-control input-sm " /></td>
                                             <td><input type="text" id="txtfourth" class="form-control input-sm " /></td>
                                             <td><select name="marital_status"  class="form-control input-sm m" >
                                                 <option value="in">Married</option>

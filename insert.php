@@ -87,15 +87,18 @@ $previous_medical_report=$_FILES['previous_medical_report']['name'];
 // echo $previous_medical_report;
 
 $insurance_scheme=$_POST['insurance_scheme'];
-// echo $insurance_scheme;
+// // echo $insurance_scheme;
 $government=$_POST['government'];
 $private=$_POST['private'];
-$guardian_name=$_POST['guardian_name'];
+$orphan =$_POST['orphan'];
+$guardian_name =$_POST['guardian_name'];
+echo $orphan;
 $created_at   = date('Y-m-d H:i:s');
 $updated_at=  $created_on   = date('Y-m-d H:i:s');
 // $created_by = $_SESSION["logged_user"];
 
-echo $query = "INSERT into `scholarship_table`(`form_type`,`fullname`,`dob`,`gender`,`fathername`,`mothername`,`contactnumber`,`address`,`email`,`city`,`district`,`state`,`school_name`,`reg_no`,`department`,`school_address`,`mark_percentage`,`previous_marksheet`,`term_semester`,`academic_year`,`scholarship_select`,`phone_no`,`student_email`,`account_no`,`bank_name`,`ifsc_code`,`aadhar_number`,`bank_attachment`,`guardian_name`,`created_at`,`updated_at`) VALUES ('$form_type','$fullname','$dob','$gender','$fathername','$mothername','$contactnumber','$address','$email','$city','$district','$state','$school_name','$reg_no','$department','$school_address','$mark_percentage','$previous_marksheet','$term_semester','$academic_year','$scholarship_select','$phone_no','$student_email','$account_no','$bank_name','$ifsc_code','$aadhar_number','$bank_attachment','$guardian_name','$created_at','$updated_at')";
+echo $query = "INSERT into `scholarship_table`( `form_type`, `fullname`, `dob`, `gender`, `fathername`, `mothername`, `contactnumber`, `address`, `email`, `city`, `district`, `state`, `school_name`, `reg_no`, `department`, `school_address`, `mark_percentage`, `previous_marksheet`, `term_semester`, `academic_year`, `scholarship_select`, `phone_no`, `student_email`, `account_no`, `bank_name`, `ifsc_code`, `aadhar_number`, `bank_attachment`, `hospital_name`, `disease_select`, `disease_name`, `severity_disease`, `admission_date`, `approximate_expense`, `request_amount`, `hospital_report`, `previous_medical_report`,`insurance_scheme`,`government`,`private`,`orphan`, `guardian_name`, `created_at`, `updated_at`) VALUES ('$form_type','$fullname','$dob','$gender','$fathername','$mothername','$contactnumber','$address','$email','$city','$district','$state','$school_name','$reg_no','$department','$school_address','$mark_percentage','$previous_marksheet','$term_semester','$academic_year','$scholarship_select','$phone_no','$student_email','$account_no','$bank_name','$ifsc_code','$aadhar_number','$bank_attachment',
+'$hospital_name','$disease_select','$disease_name','$severity_disease','$admission_date','$approximate_expense','$request_amount','$hospital_report','$previous_medical_report','$insurance_scheme','$government','$private','$orphan','$guardian_name','$created_at','$updated_at')";
 $result = mysqli_query($conn,$query);
 var_dump($result);
  echo 'Files has uploaded'; 
@@ -111,10 +114,19 @@ if (move_uploaded_file($pm_tempname, $pm_folder)) {
 }
 
 
+echo $orphan;
+
+if($orphan == "no")
+{
+$name= $_POST['name'];
+echo($name);
+$age= $_POST['age'];
+$gender= $_POST['gender'];
 
 
 
-
-
-
+echo $query1 = "INSERT INTO `family_information`(`name`, `age`, `gender`) VALUES ('$name','$age','$gender')";
+$result = mysqli_query($conn,$query1);
+var_dump($result);
+}
 ?>
