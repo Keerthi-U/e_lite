@@ -272,9 +272,11 @@ input.file-up:after {
     include("db.php");
     ?>
   <div class="container">
+
 <div class="main">
     <h1 class="text-center sc-heading">Scholarship Form</h1>
 <form class="form" action="" name="myform" method="post" id="myform" onsubmit="return medical()" enctype="multipart/form-data">
+
 <div class="form-group row choose-frm">
                         <label for="inputEmail3" class=" choose_form  col-sm-4 col-form-label">Choose form Type</label>
                         <div class="col-sm-8">
@@ -289,11 +291,7 @@ input.file-up:after {
                     </div>
                     <div class="wrapper wrapperhide " id="wrapper" >
                   
-                  
-            
-    
-      
-  
+                
                     <div class="heading1" id="t1">
                         <div class="heading1_1 text-light">A.General Information</div>
                         <div class="heading1_2"><i class="fa-solid fa-chevron-down first text-light"></i></div>
@@ -308,7 +306,7 @@ input.file-up:after {
                             </div>  
                             <div class="dob col-md-12 col-lg-4 col-xl-4">
                                 <label for="d_o_admission">Date Of Birth</label>
-                                <input id="d_o_admission" type="date" class="form-control date" name="dob" placeholder="Select date...">
+                                <input id="d_o_admission" type="date" class="form-control date" name="dob"  placeholder="Select date...">
                                  
                              </div>
                             <div class="gender col-lg-4">
@@ -700,18 +698,18 @@ input.file-up:after {
                                         <th>Annual Income</th>
                                         <th>Add</th> 
                                         <tr id='row_0'>
-                                            <td><input type="text" id="txtfirst" name="name" class="form-control input-sm " /></td>
-                                            <td><input type="text" id="txtsecond" name="age" class="form-control input-sm " /></td>
-                                            <td><input type="text" id="txtthird" name="gender"  class="form-control input-sm " /></td>
-                                            <td><input type="text" id="txtfourth" class="form-control input-sm " /></td>
-                                            <td><select name="marital_status"  class="form-control input-sm m" >
-                                                <option value="in">Married</option>
-                                                <option value="de">Unmarried</option>
-                                                <option value="fr">Widow/Widowar</option>
-                                                <option value="us">Single Parent</option>
+                                            <td><input type="text" id="txtfirst" name="name[]" class="form-control input-sm " /></td>
+                                            <td><input type="text" id="txtsecond" name="age[]" class="form-control input-sm " /></td>
+                                            <td><input type="text" id="txtthird" name="genders[]"  class="form-control input-sm " /></td>
+                                            <td><input type="text" id="txtfourth" name="relation[]" class="form-control input-sm " /></td>
+                                            <td><select   name="martial_status[]" class="form-control input-sm m" >
+                                                <option value="0">Married</option>
+                                                <option value="1">Unmarried</option>
+                                                <option value="2">Widow/Widowar</option>
+                                                <option value="3">Single Parent</option>
                                             </select></td>
-                                            <td><input type="text" id="txtfifth" class="form-control " oninput="calculate('row_0')"/></td>
-                                            <td><input type="text" id="txtsix" class="form-control t"  /></td>
+                                            <td><input type="text" id="txtfifth" class="form-control "  name="occupation[]" oninput="calculate('row_0')"/></td>
+                                            <td><input type="text" id="txtsix" class="form-control t" name="annual_income[]" /></td>
                                             <td><i class="fa fa-plus" onClick="insertRow()"></i></td>
                                         </tr>
                                     
@@ -734,7 +732,11 @@ input.file-up:after {
                         </div>
                         </div>
                         <div class="submit">
-                           <button type="submit" name="submit"  class="btn btn-primary" id="submit">Submited</button>
+            
+                       
+              
+ <button type="submit" name="submit"  class="btn btn-primary" id="submit">Submit</button>
+            
                         </div>
                     </div>
                 </div>
