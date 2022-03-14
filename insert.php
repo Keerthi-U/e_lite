@@ -151,22 +151,30 @@ if($orphan == "no")
 // for ($i = 0; $i < $length; $i++) {
 //   print $array[$i];
 // }
-
-for($i=0;$i<count($_POST['name'][$i]);$i++) {
-  
-  $name =$_POST['name'][$i];
-  var_dump($name);
-  $age =$_POST['age'][$i];
-  $gender =$_POST['genders'][$i];
-  
+// error_reporting(0);
+$max_number = max(count($_POST["name"]), count($_POST["age"]),count($_POST["genders"]));
+for($i=0; $i <=count($_POST['name'][$i]); $i++)
+{
+  // echo $_POST['name'][$i];
+  // echo '<br>';
+  // echo $_POST['age'][$i];
 
   // '$_POST['name']['$i']','$_POST['age']['$i']','$_POST['genders']['$i']'
 
-echo $val="INSERT INTO `family_information`(`name`, `age`, `gender`) VALUES ('$_POST[name][$i]','$_POST[age][$i]','$_POST[genders][$i]')";
-$total = mysqli_query($conn,$val);
+// echo $sql="INSERT INTO `family_information`(`name`,`age`,`gender`) VALUES ('$_POST['name'][$i]','$_POST['age'][$i]','$_POST['genders'][$i]')";
+echo $sql="INSERT INTO `family_information`(`name`,`age`,`gender`) VALUES ('".$_POST["name"][$i]."','".$_POST["age"][$i]."','".$_POST["genders"][$i]."')";
+$total = mysqli_query($conn,$sql);
 var_dump($total);
 // echo "$array[$i]";
 // }
 }
+// if(isset($_POST['cntr'])){
+// $sql = 'INSERT INTO `family_information` (`name`,`age`,`genders`) VALUES';
+// for ($x = 0; $x < $_POST['cntr']; $x++){
+//   $sql .= "('".mysqli_escape_string($_POST['name'][$x])."','"
+//   .mysqli_escape_string($_POST['age'][$x])."','"
+//   .mysqli_escape_string($_POST['genders'][$x])."'),";
+
+// }
 }
 ?>

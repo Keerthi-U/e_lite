@@ -1,18 +1,20 @@
 <?php
 if(isset($_POST['submit'])){
 
-//   $total=$_POST['name'];
-//   echo $total;
-// for ($i=0; $i <= count($_POST['name'][$i]); $i++){
-//  echo $name=$_POST['name'][$i];
+    $max_number = max(count($_POST["name"]), count($_POST["age"]));
+    for($i=0; $i < $max_number; $i++)
+    {
+echo $_POST['name'][$i];
+echo '<br>';
+echo $_POST['age'][$i];
+    }
+// $name = $_POST['name'];
+// $email = $_POST['age'];
+// foreach( $name as $key => $n ) {
+//     print "The name is " . $n . " <br> and age is <br> " . $email[$key] . ", \n";
+//   }
 
-//   echo  $age=$_POST['age'][$i];
-// }
-$count = count($_POST['member']);
-for ($i = 0; $i < $count; $i++) {
-  echo  $fname = $_POST['member'][$i]['fname'];
-  echo  $lname = $_POST['member'][$i]['lname'];
-}
+
 
 }
 
@@ -30,11 +32,11 @@ for ($i = 0; $i < $count; $i++) {
 <body>
 
 <form class="form" action="" name="myform" method="post" id="myform"  enctype="multipart/form-data">
-   name: <input type="text" name="member[0][fname]">
+   name: <input type="text" name="name[]">
    <br>
   age:  <input type="text" name="age[]">
   <br>
-  name:  <input type="text" name="member[0][lname]">
+  name:  <input type="text"  name="name[]">
   <br>
   age:  <input type="text" name="age[]">
   <br>
