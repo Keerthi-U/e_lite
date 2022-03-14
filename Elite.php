@@ -293,7 +293,7 @@ input.file-up:after {
                   
                 
                     <div class="heading1" id="t1">
-                        <div class="heading1_1 text-light">A.General Information</div>
+                        <div class="heading1_1 text-light">A.Generals Information</div>
                         <div class="heading1_2"><i class="fa-solid fa-chevron-down first text-light"></i></div>
                     </div>
                     <div id="toggle1">
