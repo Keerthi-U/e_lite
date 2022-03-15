@@ -12,6 +12,7 @@ var index = 0;
                     t1.id = "txtfirst"+index;
                    
                     t1.setAttribute("class", "form-control");
+                    t1.setAttribute("name", "name[]");
                     t1.setAttribute("id", "txtfirst");
                     t1.setAttribute("type", "text");
                     cell1.appendChild(t1);
@@ -21,6 +22,7 @@ var index = 0;
                 var t2=document.createElement("input");
                 
                     t2.id = "txtsecond"+index;
+                    t2.setAttribute("name", "age[]");
                     t2.setAttribute("type", "text");
                     t2.setAttribute("class", "form-control ");
                     t2.setAttribute("id", "txtsecond");
@@ -31,6 +33,7 @@ var index = 0;
                 var t3=document.createElement("input");
                 
                     t3.id = "txtthird"+index;
+                    t3.setAttribute("name", "genders[]");
                     t3.setAttribute("type", "text");
                     t3.setAttribute("class", "form-control ");
                     t3.setAttribute("id", "txtthird");
@@ -39,6 +42,7 @@ var index = 0;
                 var cell4=row.insertCell(3);
 
                 var t4=document.createElement("input");
+                t4.setAttribute("name", "relation[]");
                     t4.id = "txtfourth"+index;
                     t4.setAttribute("type", "text");
                     t4.setAttribute("class", "form-control t");
@@ -46,7 +50,7 @@ var index = 0;
                     cell4.appendChild(t4);
 
                     var cell5=row.insertCell(4);
-
+                   
                 var t5=document.createElement("select");
                 var opt1 = document.createElement("option");
                 var opt2 = document.createElement("option");
@@ -69,12 +73,13 @@ var index = 0;
                 t5.add(opt2, null);
                 t5.add(opt3, null);
                 t5.add(opt4, null);
-
+              
                 t5.setAttribute("value", "married");
                 t5.setAttribute("name","marital_status")
                     t5.id = "txtfifth"+index;
                    
                     t5.setAttribute("class", "form-control");
+                    t5.setAttribute("name", "martial_status[]");
                     t5.setAttribute("id", "txtfirst");
                     t5.setAttribute("type", "text");
                     var t = document.createTextNode("Volvo");
@@ -86,7 +91,7 @@ var index = 0;
                 var t6=document.createElement("input");
                
                     t6.id = "txtsix"+index;
-                   
+                    t6.setAttribute("name", "occupation[]");
                     t6.setAttribute("class", "form-control");
                     t6.setAttribute("id", "txtfirst");
                     t6.setAttribute("type", "text");
@@ -100,6 +105,7 @@ var index = 0;
                     t7.id = "txtseven"+index;
                    
                     t7.setAttribute("class", "form-control");
+                    t7.setAttribute("name", "annual_income[]");
                     t7.setAttribute("id", "txtfirst");
                     t7.setAttribute("type", "text");
                     cell7.appendChild(t7);

@@ -143,38 +143,20 @@ if($orphan == "no")
   // $martial_status=$_POST['martial_status'];
   // $occupation=$_POST['occupation'];
   // $annual_income=$_POST['annual_income'];
-//   $total=array('$name','$age','$gender','$relation','$martial_status','$occupation','$annual_income');
-// var_dump($total);
-// echo  $total;
 
-// $length = count($array);
-// for ($i = 0; $i < $length; $i++) {
-//   print $array[$i];
-// }
-// error_reporting(0);
-$max_number = max(count($_POST["name"]), count($_POST["age"]),count($_POST["genders"]));
-for($i=0; $i <=count($_POST['name'][$i]); $i++)
-{
-  // echo $_POST['name'][$i];
-  // echo '<br>';
-  // echo $_POST['age'][$i];
 
-  // '$_POST['name']['$i']','$_POST['age']['$i']','$_POST['genders']['$i']'
+  for($i=0; $i<count($_POST['name']);$i++){
+    $name =  $_POST['name'][$i];
+    $age=$_POST['age'][$i];
+    $genders=$_POST['genders'][$i];
+   $relation=$_POST['relation'][$i];
+  $martial_status=$_POST['martial_status'][$i];
+  $occupation=$_POST['occupation'][$i];
+  $annual_income=$_POST['annual_income'][$i];
 
-// echo $sql="INSERT INTO `family_information`(`name`,`age`,`gender`) VALUES ('$_POST['name'][$i]','$_POST['age'][$i]','$_POST['genders'][$i]')";
-echo $sql="INSERT INTO `family_information`(`name`,`age`,`gender`) VALUES ('".$_POST["name"][$i]."','".$_POST["age"][$i]."','".$_POST["genders"][$i]."')";
-$total = mysqli_query($conn,$sql);
-var_dump($total);
-// echo "$array[$i]";
-// }
-}
-// if(isset($_POST['cntr'])){
-// $sql = 'INSERT INTO `family_information` (`name`,`age`,`genders`) VALUES';
-// for ($x = 0; $x < $_POST['cntr']; $x++){
-//   $sql .= "('".mysqli_escape_string($_POST['name'][$x])."','"
-//   .mysqli_escape_string($_POST['age'][$x])."','"
-//   .mysqli_escape_string($_POST['genders'][$x])."'),";
-
-// }
+    // echo "<br>";
+    echo $sql="INSERT INTO `family_information`(`student_id`,`name`,`age`,`genders`,`relation`,`martial_status`,`occupation`,`annual_income`) VALUES ('$student_id','$name','$age','$genders','$relation','$martial_status','$occupation','$annual_income')";
+   $total = mysqli_query($conn,$sql);
+  }
 }
 ?>

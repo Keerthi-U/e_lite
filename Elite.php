@@ -699,6 +699,7 @@ input.file-up:after {
                                         <th>Add</th> 
                                         <tr id='row_0'>
                                        <!-- <input type="hidden" name="cntr" value="'.$_POST['counters'].'" /> -->
+                                       <input type="hidden" id="txtfirst" name="student_id" class="form-control input-sm ">
                                             <td><input type="text" id="txtfirst" name="name[]" class="form-control input-sm " /></td>
                                             <td><input type="text" id="txtsecond" name="age[]" class="form-control input-sm " /></td>
                                             <td><input type="text" id="txtthird" name="genders[]"  class="form-control input-sm " /></td>
