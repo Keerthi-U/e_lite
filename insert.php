@@ -91,16 +91,13 @@ $previous_medical_report = $_FILES["previous_medical_report"]["name"];
 $mr_tempname = $_FILES["previous_medical_report"]["tmp_name"];	
 $mr_folder = "previous_medical_report/".$previous_medical_report;
 
-// $previous_medical_report=$_FILES['previous_medical_report']['name'];
-// echo $previous_medical_report;
-
 $insurance_scheme=$_POST['insurance_scheme'];
-// // echo $insurance_scheme;
+
 $government=$_POST['government'];
 $private=$_POST['private'];
 $orphan =$_POST['orphan'];
 $guardian_name =$_POST['guardian_name'];
-// echo $orphan;
+
 $created_at   = date('Y-m-d H:i:s');
 $updated_at=  $created_on   = date('Y-m-d H:i:s');
 // $created_by = $_SESSION["logged_user"];
@@ -131,32 +128,30 @@ if (move_uploaded_file($hr_tempname, $hr_folder)) {
   $msg = "Failed to upload image";
 }
 
+$lastid = mysqli_insert_id($conn); 
 
+echo "last id : ".$lastid; 
+
+
+if($lastid > 0){
 echo $orphan;
 
 if($orphan == "no")
 {
-  // $name=$_POST['name'][i];
-  // $age=$_POST['age'];
-  // $gender=$_POST['genders'];
-  // $relation=$_POST['relation'];
-  // $martial_status=$_POST['martial_status'];
-  // $occupation=$_POST['occupation'];
-  // $annual_income=$_POST['annual_income'];
 
-
-  for($i=0; $i<count($_POST['name']);$i++){
-    $name =  $_POST['name'][$i];
-    $age=$_POST['age'][$i];
-    $genders=$_POST['genders'][$i];
-   $relation=$_POST['relation'][$i];
+for($i=0; $i<count($_POST['name']);$i++){
+  $name =  $_POST['name'][$i];
+  $age=$_POST['age'][$i];
+  $genders=$_POST['genders'][$i];
+  $relation=$_POST['relation'][$i];
   $martial_status=$_POST['martial_status'][$i];
   $occupation=$_POST['occupation'][$i];
   $annual_income=$_POST['annual_income'][$i];
 
-    // echo "<br>";
-    echo $sql="INSERT INTO `family_information`(`student_id`,`name`,`age`,`genders`,`relation`,`martial_status`,`occupation`,`annual_income`) VALUES ('$student_id','$name','$age','$genders','$relation','$martial_status','$occupation','$annual_income')";
+  
+    echo $sql="INSERT INTO `family_information`(`student_id`,`name`,`age`,`genders`,`relation`,`martial_status`,`occupation`,`annual_income`) VALUES ('$lastid','$name','$age','$genders','$relation','$martial_status','$occupation','$annual_income')";
    $total = mysqli_query($conn,$sql);
   }
+}
 }
 ?>
