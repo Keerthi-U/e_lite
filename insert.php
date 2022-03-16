@@ -145,11 +145,12 @@ for($i=0; $i<count($_POST['name']);$i++){
   $genders=$_POST['genders'][$i];
   $relation=$_POST['relation'][$i];
   $martial_status=$_POST['martial_status'][$i];
+  $qualification=$_POST['qualification'][$i];
   $occupation=$_POST['occupation'][$i];
   $annual_income=$_POST['annual_income'][$i];
 
   
-    echo $sql="INSERT INTO `family_information`(`student_id`,`name`,`age`,`genders`,`relation`,`martial_status`,`occupation`,`annual_income`) VALUES ('$lastid','$name','$age','$genders','$relation','$martial_status','$occupation','$annual_income')";
+    echo $sql="INSERT INTO `family_information`(`student_id`,`name`,`age`,`genders`,`relation`,`martial_status`,`qualification`,`occupation`,`annual_income`) VALUES ('$lastid','$name','$age','$genders','$relation','$martial_status','$qualification','$occupation','$annual_income')";
    $total = mysqli_query($conn,$sql);
   }
 }

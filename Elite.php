@@ -372,31 +372,43 @@
                                 <label for="f_members">Number Of Family Members:-</label>
                                 <div class="f_members2">
                                     <table id="myTable" class="table table-bordered">
-                                        <th>Name</th>
-                                        <th>Age</th>
-                                        <th>Gender</th>
-                                        <th>Relation</th>
-                                        <th>Marital Status</th>
-                                        <th>Occupation</th>
-                                        <th>Annual Income</th>
+                                        <th width="26%">Name</th>
+                                        <th  width="7%">Age</th>
+                                        <th  width="12%">Gender</th>
+                                        <th  width="14%">  Relation</th>
+                                        <th  width="12%">Marital Status</th>
+                                        <th  width="6%">Qualification</th>
+                                        <th  width="11%"> Occupation</th>
+                                        <th width="12%">Annual Income</th>
                                         <th>Add</th> 
                                         <tr id='row_0'>
                                        <!-- <input type="hidden" name="cntr" value="'.$_POST['counters'].'" /> -->
                                        <input type="hidden" id="txtfirst" name="student_id" class="form-control input-sm ">
                                             <td><input type="text" id="txtfirst" name="name[]" class="form-control input-sm " /></td>
                                             <td><input type="text" id="txtsecond" name="age[]" class="form-control input-sm " /></td>
-                                            <td><input type="text" id="txtthird" name="genders[]"  class="form-control input-sm " /></td>
-                                            <td><input type="text" id="txtfourth" name="relation[]" class="form-control input-sm " /></td>
-                                            <td><select   name="martial_status[]" class="form-control input-sm m" >
-                                                <option value="0">Married</option>
-                                                <option value="1">Unmarried</option>
-                                                <option value="2">Widow/Widowar</option>
-                                                <option value="3">Single Parent</option>
+                                            <td><select id="txtthird" name="genders[]"  class="form-control input-sm " >
+                                                <option value="1">Male</option>
+                                                <option value="2">Female</option>
+                                                </select>
+                                            </td>
+                                            <td><select id="txtfourth" name="relation[]" class="form-control input-sm " >
+                                                <option value="1">Father</option>
+                                                <option value="2">Mother</option>
+                                                <option value="3">Sister</option>
+                                                <option value="4">Brother</option>
+                                               </select>
+                                           </td>
+                                            <td><select id="txtfifth"  name="martial_status[]" class="form-control input-sm m" >
+                                                <option value="1">Married</option>
+                                                <option value="2">Unmarried</option>
+                                                <option value="3">Widow/Widowar</option>
+                                                <option value="4">Single Parent</option>
                                             </select></td>
-                                            <td><input type="text" id="txtfifth" class="form-control "  name="occupation[]" oninput="calculate('row_0')"/></td>
-                                            <td><input type="text" id="txtsix" class="form-control t" name="annual_income[]" /></td>
+                                            <td><input type="text" id="txtsix" class="form-control t" name="qualification[]" /></td>
+                                            <td><input type="text" id="txtseven" class="form-control "  name="occupation[]" oninput="calculate('row_0')"/></td>
+                                            <td><input type="text" id="txteight" class="form-control t" name="annual_income[]" /></td>
                                             <td><i class="fa fa-plus" onClick="insertRow()"></i></td>
-                                        </tr>
+                                         </tr>
                                     
                                     </table>
                                 </div>

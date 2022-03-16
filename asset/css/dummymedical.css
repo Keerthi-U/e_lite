@@ -1,7 +1,7 @@
 .main{
     padding: 15px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 7%;
+    margin-right: 7%;
     margin-top: 3%;
     border: 3px solid lightgray;
     box-shadow: 2px 15px 20px lightgrey;
@@ -84,14 +84,14 @@ div#orphan {
     margin-left: 1em;
 }
 label.orphan {
-    margin-left: -1.7%;
+    margin-left: 0.3%;
 }
 .f_members1 {
     display: flex;
     justify-content: space-between;
 }
 select.form-control.input-sm {
-    width: 106px;
+    /* width: 106px; */
 }
 select#txtfirst {
     width: 106px;
@@ -101,7 +101,7 @@ i.fa.fa-plus {
         height: 36px;
         width: 41px;
         padding-left: 13px;
-        padding-top: 0.6em;
+        padding-top: 0.9em;
         border-radius: 5px;
         color: white;
     }

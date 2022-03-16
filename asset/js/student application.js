@@ -28,28 +28,102 @@ var index = 0;
                     t2.setAttribute("id", "txtsecond");
                     cell2.appendChild(t2);
 
-                var cell3=row.insertCell(2);
+                // var cell3=row.insertCell(2);
 
-                var t3=document.createElement("input");
+                // var t3=document.createElement("input");
                 
+                //     t3.id = "txtthird"+index;
+                //     t3.setAttribute("name", "genders[]");
+                //     t3.setAttribute("type", "text");
+                //     t3.setAttribute("class", "form-control ");
+                //     t3.setAttribute("id", "txtthird");
+                //     cell3.appendChild(t3);
+                var cell3=row.insertCell(2);
+                   
+                var t3=document.createElement("select");
+                var opt1 = document.createElement("option");
+                var opt2 = document.createElement("option");
+                var opt3 = document.createElement("option");
+                var opt4 = document.createElement("option");
+
+                opt1.value = "1";
+                opt1.text = "Male";
+
+                opt2.value = "2";
+                opt2.text = "Female";
+
+              
+
+                t3.add(opt1, null);
+                t3.add(opt2, null);
+               
+              
+                t3.setAttribute("value", "male");
+                t3.setAttribute("name","gender")
                     t3.id = "txtthird"+index;
+                   
+                    t3.setAttribute("class", "form-control");
                     t3.setAttribute("name", "genders[]");
-                    t3.setAttribute("type", "text");
-                    t3.setAttribute("class", "form-control ");
                     t3.setAttribute("id", "txtthird");
+                    t3.setAttribute("type", "text");
+                    var t = document.createTextNode("Volvo");
+                    t3.appendChild(t);
                     cell3.appendChild(t3);
 
-                var cell4=row.insertCell(3);
 
-                var t4=document.createElement("input");
-                t4.setAttribute("name", "relation[]");
-                    t4.id = "txtfourth"+index;
-                    t4.setAttribute("type", "text");
-                    t4.setAttribute("class", "form-control t");
-                    t4.setAttribute("id", "txttotal");
-                    cell4.appendChild(t4);
+                    // var cell4=row.insertCell(3);
 
-                    var cell5=row.insertCell(4);
+                    // var t4=document.createElement("input");
+                    // t4.setAttribute("name", "relation[]");
+                    // t4.id = "txtfourth"+index;
+                    // t4.setAttribute("type", "text");
+                    // t4.setAttribute("class", "form-control t");
+                    // t4.setAttribute("id", "txttotal");
+                    // cell4.appendChild(t4);
+               
+                    var cell4=row.insertCell(3);
+                   
+                    var t4=document.createElement("select");
+                    var opt1 = document.createElement("option");
+                    var opt2 = document.createElement("option");
+                    var opt3 = document.createElement("option");
+                    var opt4 = document.createElement("option");
+    
+                    opt1.value = "1";
+                    opt1.text = "Father";
+    
+                    opt2.value = "2";
+                    opt2.text = "Mother";
+    
+                    opt3.value = "3";
+                    opt3.text = "Sister";
+    
+                    opt4.value = "4";
+                    opt4.text = "Brother";
+    
+                    t4.add(opt1, null);
+                    t4.add(opt2, null);
+                    t4.add(opt3, null);
+                    t4.add(opt4, null);
+                  
+                    t4.setAttribute("value", "Father");
+                    t4.setAttribute("name","relation")
+                        t4.id = "txtfourth"+index;
+                       
+                        t4.setAttribute("class", "form-control");
+                        t4.setAttribute("name", "relation[]");
+                        t4.setAttribute("id", "txtfourth");
+                        t4.setAttribute("type", "text");
+                        var t = document.createTextNode("Volvo");
+                        t4.appendChild(t);
+                        cell4.appendChild(t4);
+    
+
+
+
+
+
+                var cell5=row.insertCell(4);
                    
                 var t5=document.createElement("select");
                 var opt1 = document.createElement("option");
@@ -80,24 +154,37 @@ var index = 0;
                    
                     t5.setAttribute("class", "form-control");
                     t5.setAttribute("name", "martial_status[]");
-                    t5.setAttribute("id", "txtfirst");
+                    t5.setAttribute("id", "txtfifth");
                     t5.setAttribute("type", "text");
                     var t = document.createTextNode("Volvo");
                     t5.appendChild(t);
                     cell5.appendChild(t5);
 
+                  // qualification
+                    
+                 
+
+
+                    // occupation
                     var cell6=row.insertCell(5);
 
-                var t6=document.createElement("input");
-               
+                   var t6=document.createElement("input");
+                 
                     t6.id = "txtsix"+index;
-                    t6.setAttribute("name", "occupation[]");
+                    t6.setAttribute("name", "qualification[]");
                     t6.setAttribute("class", "form-control");
-                    t6.setAttribute("id", "txtfirst");
+                    t6.setAttribute("id", "txtsix");
                     t6.setAttribute("type", "text");
                     
                     cell6.appendChild(t6);
 
+
+
+
+
+
+
+                    
                     var cell7=row.insertCell(6);
 
                 var t7=document.createElement("input");
@@ -105,12 +192,29 @@ var index = 0;
                     t7.id = "txtseven"+index;
                    
                     t7.setAttribute("class", "form-control");
-                    t7.setAttribute("name", "annual_income[]");
-                    t7.setAttribute("id", "txtfirst");
+                    t7.setAttribute("name", "occupation[]");
+                    t7.setAttribute("id", "txtseven");
                     t7.setAttribute("type", "text");
                     cell7.appendChild(t7);
 
+
+                    
                     var cell8=row.insertCell(7);
+
+                    var t8=document.createElement("input");
+                    
+                        t8.id = "txteight"+index;
+                       
+                        t8.setAttribute("class", "form-control");
+                        t8.setAttribute("name", "annual_income[]");
+                        t8.setAttribute("id", "txteight");
+                        t8.setAttribute("type", "text");
+                        cell8.appendChild(t8);
+
+
+
+
+                    var cell9=row.insertCell(8);
                     var removebtn = document.createElement('input');
                     removebtn.classList.add('btn','btn-danger','Removebtn');
                     removebtn.id="btn"+index;
@@ -120,7 +224,7 @@ var index = 0;
                     
                      removebtn.setAttribute("type","button")
                      removebtn.setAttribute("value","-")
-                     cell8.appendChild(removebtn);
+                     cell9.appendChild(removebtn);
 
                      index++;
 
