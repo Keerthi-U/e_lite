@@ -8,7 +8,7 @@ include('db.php');
   //  $selected=$_POST['select']; 
   //     var_dump($selected);
 // $id=$_POST['id'];
-$form_type = $_POST['form_type'];
+ $form_type = $_POST['form_type'];
  $fullname = $_POST['fullname'];
 //  echo"$fullname";
 $dob = $_POST['dob'];
@@ -151,7 +151,7 @@ for($i=0; $i<count($_POST['name']);$i++){
 
   
     echo $sql="INSERT INTO `family_information`(`student_id`,`name`,`age`,`genders`,`relation`,`martial_status`,`qualification`,`occupation`,`annual_income`) VALUES ('$lastid','$name','$age','$genders','$relation','$martial_status','$qualification','$occupation','$annual_income')";
-   $total = mysqli_query($conn,$sql);
+    $total = mysqli_query($conn,$sql);
   }
 }
 }
